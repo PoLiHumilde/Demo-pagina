@@ -3,7 +3,7 @@ const PRODUCTS=[
 {id:1,cat:'hogar',sku:'Hogar 01',img:'img/suavizante.jpg',name:'Suavizante Eliansa',spec:'Ropa suave · Aroma duradero',desc:'El favorito de la casa. Deja la ropa suave y oliendo rico.',price:250,old:300,tag:'EL FAVORITO',hot:1},
 {id:2,cat:'hogar',sku:'Hogar 02',img:'img/suavizante-galon.jpg',name:'Suavizante Galón',spec:'Galón · Para el mes',desc:'Presentación grande para que no te falte en la semana.',price:495,old:595,tag:'',hot:0},
 {id:3,cat:'hogar',sku:'Hogar 03',img:'img/suavizante-1l.jpg',name:'Suavizante 1 Litro',spec:'Botella 1L · Uso diario',desc:'Tamaño práctico para el hogar.',price:195,old:240,tag:'',hot:0},
-{id:4,cat:'hogar',sku:'Hogar 04',img:'img/jabon-cama.jpg',name:'Jabón de Cama',spec:'Galón · Limpieza profunda',desc:'Para sábanas, cortinas y ropa de cama.',price:450,old:540,tag:'',hot:0},
+{id:4,cat:'hogar',sku:'Hogar 04',img:'img/jabon-cuaba.jpg',name:'Jabón de Cuaba',spec:'Galón · El de fregar',desc:'El clásico jabón de cuaba para fregar y lavar.',price:450,old:540,tag:'',hot:0},
 {id:5,cat:'bano',sku:'Baño 01',img:'img/cloro.jpg',name:'Cloro Eliansa',spec:'Botella 1L · Desinfecta',desc:'Para baños, pisos y ropa blanca. No puede faltar.',price:150,old:185,tag:'',hot:0},
 {id:6,cat:'desinf',sku:'Pisos 01',img:'img/desinfectante-lavanda.jpg',name:'Desinfectante Lavanda',spec:'Botella 1L · Aroma lavanda',desc:'Limpia, desinfecta y deja la casa oliendo rico por horas.',price:200,old:250,tag:'EL FAVORITO',hot:1},
 {id:7,cat:'desinf',sku:'Pisos 02',img:'img/desinfectante-floral.jpg',name:'Desinfectante Floral 1.6L',spec:'1.6L · Bouquet floral',desc:'Fórmula concentrada de larga duración con aroma floral.',price:350,old:425,tag:'',hot:0},
