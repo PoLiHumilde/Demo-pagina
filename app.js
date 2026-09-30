@@ -19,6 +19,7 @@ const PRODUCTS=[
 {id:13,cat:'auto',sku:'Auto 02',img:'img/limpia-parabrisas.png',name:'Limpia Parabrisas',spec:'Visibilidad clara',desc:'Remueve suciedad sin dejar residuos.',price:375,old:450,tag:'',hot:0},
 {id:14,cat:'auto',sku:'Auto 03',img:'img/agua-bateria.png',name:'Agua para Batería',spec:'Galón · Mantenimiento',desc:'Para el cuidado de la batería de tu vehículo.',price:300,old:375,tag:'',hot:0},
 {id:15,cat:'auto',sku:'Auto 04',img:'img/almorol.png',name:'Almorol Blanco',spec:'Spray · Protector premium',desc:'Acabado brillante con protección UV para gomas e interiores.',price:325,old:395,tag:'NUEVO',hot:0},
+{id:16,cat:'auto',sku:'Auto 05',img:'img/coolant-brujo.png',name:'Coolant Mr. Brujo 50/50',spec:'Galón · Automotriz',desc:'Enfriamiento superior. Evita corrosión y sobrecalentamiento.',price:750,old:890,tag:'NUEVO',hot:0},
 ];
 const CATS={hogar:'Hogar',cocina:'Cocina',bano:'Baños',desinf:'Desinfectantes',pisos:'Pisos',auto:'Automotriz'};
 let cart=[];try{cart=JSON.parse(localStorage.getItem('nc-cart')||'[]');}catch(e){cart=[];}
