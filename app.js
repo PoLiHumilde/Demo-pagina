@@ -1,4 +1,8 @@
-const WA='18096106690';
+const WA='18096106690',WA2='18297785347';
+let pendingWa='Hola Eliansa';
+function waNumLink(num,msg){return 'https://wa.me/'+num+'?text='+encodeURIComponent(msg);}
+function waChoose(msg){pendingWa=msg||'Hola Eliansa';document.getElementById('waOpt1').href=waNumLink(WA,pendingWa);document.getElementById('waOpt2').href=waNumLink(WA2,pendingWa);document.getElementById('waModal').classList.add('open');}
+function closeWa(){document.getElementById('waModal').classList.remove('open');}
 const PRODUCTS=[
 {id:1,cat:'hogar',sku:'Hogar 01',img:'img/suavizante-galon.png',name:'Suavizante de Ropa',spec:'Galón · Ropa suave',desc:'Ropa suave y con rico aroma. El favorito de la casa.',price:495,old:595,tag:'EL FAVORITO',hot:1},
 {id:2,cat:'hogar',sku:'Hogar 02',img:'img/air-freshener.png',name:'Air Freshener Cherry',spec:'Spray · Aroma cherry',desc:'Aroma duradero, elimina olores. Hogar fresco.',price:225,old:280,tag:'NUEVO',hot:0},
@@ -20,7 +24,6 @@ const CATS={hogar:'Hogar',cocina:'Cocina',bano:'Baños',desinf:'Desinfectantes',
 let cart=[];try{cart=JSON.parse(localStorage.getItem('nc-cart')||'[]');}catch(e){cart=[];}
 let curFilter='todos',curSearch='',curSort='rel';
 const fmt=n=>'RD$'+n.toLocaleString('es-DO');
-function waLink(msg){return 'https://wa.me/'+WA+'?text='+encodeURIComponent(msg);}
 function save(){try{localStorage.setItem('nc-cart',JSON.stringify(cart));}catch(e){}updateBadge();}
 function updateBadge(){const c=cart.reduce((a,i)=>a+i.qty,0);document.getElementById('count').textContent=c;document.getElementById('count2').textContent=c+(c===1?' ítem':' ítems');
 const tot=cart.reduce((a,i)=>a+i.qty*(i.price||0),0);
@@ -31,11 +34,11 @@ box.innerHTML=cart.map((i,idx)=>{const img=i.img?`<img src="${i.img}" onerror="t
 function chQty(idx,d){cart[idx].qty+=d;if(cart[idx].qty<=0)cart.splice(idx,1);save();}
 function clearCart(){cart=[];save();toast('Carrito vaciado');}
 function addToCart(id){const p=PRODUCTS.find(x=>x.id===id);const f=cart.find(x=>x.id===id);if(f)f.qty++;else cart.push({id:p.id,name:p.name,price:p.price,img:p.img,qty:1});save();toast('Agregado al pedido');}
-function askPrice(id){const p=PRODUCTS.find(x=>x.id===id);window.open(waLink('Hola Eliansa, ¿qué precio tiene '+p.name+' ('+p.spec+')?'),'_blank');}
-function comboQuote(name){window.open(waLink('Hola Eliansa, me interesa el '+name+'. ¿Qué precio tiene?'),'_blank');}
+function askPrice(id){const p=PRODUCTS.find(x=>x.id===id);waChoose('Hola Eliansa, ¿qué precio tiene '+p.name+' ('+p.spec+')?');}
+function comboQuote(name){waChoose('Hola Eliansa, me interesa el '+name+'. ¿Qué precio tiene?');}
 function addCombo(name,price,img){const f=cart.find(x=>x.name===name);if(f)f.qty++;else cart.push({id:'pack-'+Date.now(),name,price,img:img||'img/suavizante-galon.png',qty:1});save();toast('Combo agregado');toggleCart(true);}
 function toggleCart(force){const c=document.getElementById('cart'),o=document.getElementById('overlay');const open=typeof force==='boolean'?force:!c.classList.contains('open');c.classList.toggle('open',open);o.classList.toggle('show',open);}
-function checkout(){if(!cart.length){toast('Agrega productos primero');return;}const tot=cart.reduce((a,i)=>a+i.qty*(i.price||0),0);const lines=cart.map(i=>`• ${i.qty}x ${i.name}${i.price!=null?' - '+fmt(i.price*i.qty):' (precio a consultar)'}`).join('\n');const msg=`Hola Eliansa, quiero hacer este pedido:\n${lines}${tot>0?'\nTotal: '+fmt(tot):''}\nMi nombre es: `;window.open(waLink(msg),'_blank');}
+function checkout(){if(!cart.length){toast('Agrega productos primero');return;}const tot=cart.reduce((a,i)=>a+i.qty*(i.price||0),0);const lines=cart.map(i=>`• ${i.qty}x ${i.name}${i.price!=null?' - '+fmt(i.price*i.qty):' (precio a consultar)'}`).join('\n');const msg=`Hola Eliansa, quiero hacer este pedido:\n${lines}${tot>0?'\nTotal: '+fmt(tot):''}\nMi nombre es: `;waChoose(msg);}
 function filterCat(c){curFilter=c;document.querySelectorAll('#filters .f').forEach(b=>b.classList.toggle('active',b.dataset.f===c));render();if(c!=='todos'){const el=document.getElementById('catalogo');if(el)el.scrollIntoView({behavior:'smooth'});}}
 function onSearch(v){curSearch=v.toLowerCase();render();}
 function onSort(v){curSort=v;render();}
@@ -54,4 +57,4 @@ function openFicha(id){const p=PRODUCTS.find(x=>x.id===id);const m=document.getE
 m.classList.add('open');}
 function closeModal(){document.getElementById('modal').classList.remove('open');}
 let toastT;function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),2200);}
-document.addEventListener('DOMContentLoaded',()=>{render();updateBadge();document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();toggleCart(false);}});});
+document.addEventListener('DOMContentLoaded',()=>{render();updateBadge();document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();toggleCart(false);closeWa();}});});
