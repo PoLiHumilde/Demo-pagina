@@ -4,14 +4,14 @@ function waNumLink(num,msg){return 'https://wa.me/'+num+'?text='+encodeURICompon
 function waChoose(msg){pendingWa=msg||'Hola Eliansa';document.getElementById('waOpt1').href=waNumLink(WA,pendingWa);document.getElementById('waOpt2').href=waNumLink(WA2,pendingWa);document.getElementById('waModal').classList.add('open');}
 function closeWa(){document.getElementById('waModal').classList.remove('open');}
 const PRODUCTS=[
-{id:1,cat:'hogar',sku:'Hogar 01',img:'img/suavizante-galon.png',name:'Suavizante de Ropa',spec:'Galón · Ropa suave',desc:'Ropa suave y con rico aroma. El favorito de la casa.',price:190,mayor:165,tag:'EL FAVORITO',hot:1},
+{id:1,cat:'hogar',sku:'Hogar 01',img:'img/suavizante.jpg',name:'Suavizante de Ropa',spec:'Galón · Ropa suave',desc:'Ropa suave y con rico aroma. El favorito de la casa.',price:190,mayor:165,tag:'EL FAVORITO',hot:1},
 {id:2,cat:'hogar',sku:'Hogar 02',img:'img/air-freshener.png',name:'Air Freshener Cherry',spec:'Spray · Aroma cherry',desc:'Aroma duradero, elimina olores. Hogar fresco.',price:null,mayor:null,tag:'NUEVO',hot:0},
 {id:3,cat:'hogar',sku:'Hogar 03',img:'img/jabon-cuaba.png',name:'Jabón de Cuaba',spec:'Galón · Limón',desc:'El clásico jabón de cuaba para fregar y lavar.',price:190,mayor:165,tag:'',hot:0},
 {id:4,cat:'cocina',sku:'Cocina 01',img:'img/lavaplatos.png',name:'Jabón Lavaplatos 500ml',spec:'500ml · Limón fresco',desc:'Poder desengrasante. Corta la grasa al instante.',price:null,mayor:null,tag:'MUY PEDIDO',hot:1},
 {id:5,cat:'cocina',sku:'Cocina 02',img:'img/lavaplatos-galon.png',name:'Jabón Lavaplatos Galón',spec:'Galón · Limpieza efectiva',desc:'Presentación grande para la cocina. Rinde más.',price:null,mayor:null,tag:'',hot:0},
-{id:6,cat:'cocina',sku:'Cocina 03',img:'img/desengrasante.png',name:'Desengrasante Multiusos',spec:'Spray · Cocina y superficies',desc:'Elimina grasa difícil. Limpieza profunda.',price:165,mayor:135,tag:'NUEVO',hot:0},
+{id:6,cat:'cocina',sku:'Cocina 03',img:'img/desgrasante-spray.jpg',name:'Desgrasante Multiuso',spec:'Spray · Cocina y superficies',desc:'Elimina grasa difícil. Limpieza profunda.',price:165,mayor:135,tag:'NUEVO',hot:0},
 {id:7,cat:'bano',sku:'Baño 01',img:'img/cloro.png',name:'Cloro 1 Litro',spec:'1L · Desinfecta',desc:'Para baños, pisos y ropa blanca. No puede faltar.',price:90,mayor:85,tag:'',hot:0},
-{id:8,cat:'bano',sku:'Baño 02',img:'img/cloro-puro.png',name:'Cloro Puro 1 Galón',spec:'1 GL · Máxima pureza',desc:'Cloro puro en galón. Rinde más por menos.',price:null,mayor:null,tag:'',hot:0},
+{id:8,cat:'bano',sku:'Baño 02',img:'img/cloro-galon.jpg',name:'Cloro 1 Galón',spec:'1 GL · Limpieza profunda',desc:'Cloro en galón para baños, pisos y ropa blanca.',price:null,mayor:null,tag:'',hot:0},
 {id:9,cat:'desinf',sku:'Desinf 01',img:'img/desinfectante-lavanda.png',name:'Desinfectante Lavanda',spec:'Aroma lavanda',desc:'Limpia, desinfecta y deja la casa oliendo rico por horas.',price:190,mayor:165,tag:'EL FAVORITO',hot:1},
 {id:10,cat:'desinf',sku:'Desinf 02',img:'img/desinfectante-floral.png',name:'Desinfectante Floral',spec:'Galón · Bouquet floral',desc:'Fórmula de larga duración con aroma floral.',price:190,mayor:165,tag:'',hot:0},
 {id:11,cat:'pisos',sku:'Pisos 01',img:'img/limpia-ceramicas.png',name:'Limpia Cerámicas',spec:'Galón · Alto rendimiento',desc:'Limpia, desengrasa y da brillo a pisos cerámicos.',price:null,mayor:255,tag:'NUEVO',hot:0},
@@ -19,7 +19,10 @@ const PRODUCTS=[
 {id:13,cat:'auto',sku:'Auto 02',img:'img/limpia-parabrisas.png',name:'Limpia Parabrisas',spec:'Visibilidad clara',desc:'Remueve suciedad sin dejar residuos.',price:null,mayor:null,tag:'',hot:0},
 {id:14,cat:'auto',sku:'Auto 03',img:'img/agua-bateria.png',name:'Agua para Batería',spec:'Galón · Mantenimiento',desc:'Para el cuidado de la batería de tu vehículo.',price:null,mayor:null,tag:'',hot:0},
 {id:15,cat:'auto',sku:'Auto 04',img:'img/almorol.png',name:'Almorol Blanco',spec:'Spray · Protector premium',desc:'Acabado brillante con protección UV para gomas e interiores.',price:null,mayor:null,tag:'NUEVO',hot:0},
-{id:16,cat:'auto',sku:'Auto 05',img:'img/coolant-brujo.png',name:'Coolant Mr. Brujo 50/50',spec:'Galón · Automotriz',desc:'Enfriamiento superior. Evita corrosión y sobrecalentamiento.',price:600,mayor:425,tag:'NUEVO',hot:0},
+{id:16,cat:'auto',sku:'Auto 05',img:'img/coolant-5050.jpg',name:'Coolant Mr. Brujo 50/50',spec:'Galón · Automotriz',desc:'Enfriamiento superior. Evita corrosión y sobrecalentamiento.',price:600,mayor:425,tag:'NUEVO',hot:0},
+{id:17,cat:'auto',sku:'Auto 06',img:'img/coolant-3030.jpg',name:'Coolant 30/30',spec:'Galón · Automotriz',desc:'Refrigerante para el radiador. Protección diaria.',price:400,mayor:350,tag:'NUEVO',hot:0},
+{id:18,cat:'auto',sku:'Auto 07',img:'img/coolant-regular.jpg',name:'Coolant Regular',spec:'Galón · Automotriz',desc:'Refrigerante regular para tu vehículo.',price:200,mayor:90,tag:'',hot:0},
+{id:19,cat:'hogar',sku:'Hogar 04',img:'img/jabon-cuaba-medio.jpg',name:'Jabón de Cuaba ½ Galón',spec:'½ GL · Limón',desc:'El clásico jabón de cuaba en tamaño medio galón.',price:null,mayor:null,tag:'NUEVO',hot:0},
 ];
 const CATS={hogar:'Hogar',cocina:'Cocina',bano:'Baños',desinf:'Desinfectantes',pisos:'Pisos',auto:'Automotriz'};
 let cart=[];try{cart=JSON.parse(localStorage.getItem('nc-cart')||'[]');}catch(e){cart=[];}
@@ -37,7 +40,7 @@ function clearCart(){cart=[];save();toast('Carrito vaciado');}
 function addToCart(id){const p=PRODUCTS.find(x=>x.id===id);const f=cart.find(x=>x.id===id);if(f)f.qty++;else cart.push({id:p.id,name:p.name,price:p.price,img:p.img,qty:1});save();toast('Agregado al pedido');}
 function askPrice(id){const p=PRODUCTS.find(x=>x.id===id);waChoose('Hola Eliansa, ¿qué precio tiene '+p.name+' ('+p.spec+')?');}
 function comboQuote(name){waChoose('Hola Eliansa, me interesa el '+name+'. ¿Qué precio tiene?');}
-function addCombo(name,price,img){const f=cart.find(x=>x.name===name);if(f)f.qty++;else cart.push({id:'pack-'+Date.now(),name,price,img:img||'img/suavizante-galon.png',qty:1});save();toast('Combo agregado');toggleCart(true);}
+function addCombo(name,price,img){const f=cart.find(x=>x.name===name);if(f)f.qty++;else cart.push({id:'pack-'+Date.now(),name,price,img:img||'img/suavizante.jpg',qty:1});save();toast('Combo agregado');toggleCart(true);}
 function toggleCart(force){const c=document.getElementById('cart'),o=document.getElementById('overlay');const open=typeof force==='boolean'?force:!c.classList.contains('open');c.classList.toggle('open',open);o.classList.toggle('show',open);}
 function checkout(){if(!cart.length){toast('Agrega productos primero');return;}const tot=cart.reduce((a,i)=>a+i.qty*(i.price||0),0);const lines=cart.map(i=>`• ${i.qty}x ${i.name}${i.price!=null?' - '+fmt(i.price*i.qty):' (precio a consultar)'}`).join('\n');const msg=`Hola Eliansa, quiero hacer este pedido:\n${lines}${tot>0?'\nTotal: '+fmt(tot):''}\nMi nombre es: `;waChoose(msg);}
 function filterCat(c){curFilter=c;document.querySelectorAll('#filters .f').forEach(b=>b.classList.toggle('active',b.dataset.f===c));render();if(c!=='todos'){const el=document.getElementById('catalogo');if(el)el.scrollIntoView({behavior:'smooth'});}}
