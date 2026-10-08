@@ -12,7 +12,7 @@ const PRODUCTS=[
 {id:6,cat:'cocina',sku:'Cocina 03',img:'img/desgrasante-spray.jpg',name:'Desgrasante Multiuso',spec:'Spray · Cocina y superficies',desc:'Elimina grasa difícil. Limpieza profunda.',price:165,mayor:135,tag:'NUEVO',hot:0},
 {id:7,cat:'bano',sku:'Baño 01',img:'img/cloro.png',name:'Cloro 1 Litro',spec:'1L · Desinfecta',desc:'Para baños, pisos y ropa blanca. No puede faltar.',price:90,mayor:85,tag:'',hot:0},
 {id:8,cat:'bano',sku:'Baño 02',img:'img/cloro-galon.jpg',name:'Cloro 1 Galón',spec:'1 GL · Limpieza profunda',desc:'Cloro en galón para baños, pisos y ropa blanca.',price:null,mayor:null,tag:'',hot:0},
-{id:20,cat:'bano',sku:'Baño 03',img:'img/legia.png',name:'Legía',spec:'Hipoclorito 5.25%',desc:'Blanquea y desinfecta ropa y superficies.',price:null,mayor:null,tag:'NUEVO',hot:0},
+{id:20,cat:'bano',sku:'Baño 03',img:'img/legia.png',name:'Legía',spec:'Hipoclorito 5.25%',desc:'Blanquea y desinfecta ropa y superficies.',price:110,mayor:null,tag:'NUEVO',hot:0},
 {id:9,cat:'desinf',sku:'Desinf 01',img:'img/desinfectante-lavanda.png',name:'Desinfectante Lavanda',spec:'Aroma lavanda',desc:'Limpia, desinfecta y deja la casa oliendo rico por horas.',price:190,mayor:165,tag:'EL FAVORITO',hot:1},
 {id:10,cat:'desinf',sku:'Desinf 02',img:'img/desinfectante-floral.png',name:'Desinfectante Floral',spec:'Galón · Bouquet floral',desc:'Fórmula de larga duración con aroma floral.',price:190,mayor:165,tag:'',hot:0},
 {id:11,cat:'pisos',sku:'Pisos 01',img:'img/limpia-ceramicas.png',name:'Limpia Cerámicas',spec:'Galón · Alto rendimiento',desc:'Limpia, desengrasa y da brillo a pisos cerámicos.',price:null,mayor:255,tag:'NUEVO',hot:0},
