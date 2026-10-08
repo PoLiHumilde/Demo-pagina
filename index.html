@@ -27,7 +27,6 @@
 <a href="#inicio" class="active">Inicio</a>
 <a href="#catalogo">Productos</a>
 <a href="#combos">Combos</a>
-<a href="#mayorista">Por mayor</a>
 <a href="#opiniones">Opiniones</a>
 <a href="#contacto">Contacto</a>
 </nav>
@@ -144,42 +143,6 @@
 </div>
 </section>
 
-<section id="mayorista" class="wrap section">
-<div class="sec-head"><div><p class="kicker">VENTAS AL POR MAYOR</p><h2>Precios especiales <em>por cantidad.</em></h2></div><p class="sec-sub">Desde 6 unidades iguales o combinadas. Toca Pedir y nos llega tu solicitud por WhatsApp.</p></div>
-<div class="b2b">
-<div class="table-wrap"><table>
-<tr><th>Producto</th><th>Detalle</th><th>Por mayor</th><th></th></tr>
-<tr><td><strong>Jabón Galón</strong></td><td>RD$190</td><td><strong>RD$165</strong></td><td><button class="ficha" onclick="mayorQuote('Jabón Galón')">Pedir</button></td></tr>
-<tr><td><strong>Cloro</strong></td><td>RD$90</td><td><strong>RD$85</strong></td><td><button class="ficha" onclick="mayorQuote('Cloro')">Pedir</button></td></tr>
-<tr><td><strong>Suavizante</strong></td><td>RD$190</td><td><strong>RD$165</strong></td><td><button class="ficha" onclick="mayorQuote('Suavizante')">Pedir</button></td></tr>
-<tr><td><strong>Desinfectante</strong></td><td>RD$190</td><td><strong>RD$165</strong></td><td><button class="ficha" onclick="mayorQuote('Desinfectante')">Pedir</button></td></tr>
-<tr><td><strong>Limpiador cerámica ½ GL</strong></td><td>—</td><td><strong>RD$190</strong></td><td><button class="ficha" onclick="mayorQuote('Limpiador de cerámica medio galón')">Pedir</button></td></tr>
-<tr><td><strong>Limpiador cerámicas GL</strong></td><td>—</td><td><strong>RD$255</strong></td><td><button class="ficha" onclick="mayorQuote('Limpiador de cerámicas galón')">Pedir</button></td></tr>
-<tr><td><strong>Desgrasante GL</strong></td><td>RD$215</td><td><strong>RD$165</strong></td><td><button class="ficha" onclick="mayorQuote('Desgrasante galón')">Pedir</button></td></tr>
-<tr><td><strong>Desgrasante Litro</strong></td><td>RD$165</td><td><strong>RD$115</strong></td><td><button class="ficha" onclick="mayorQuote('Desgrasante litro')">Pedir</button></td></tr>
-<tr><td><strong>Desgrasante spray ½ L</strong></td><td>RD$165</td><td><strong>RD$135</strong></td><td><button class="ficha" onclick="mayorQuote('Desgrasante spray medio litro')">Pedir</button></td></tr>
-<tr><td><strong>Pinol</strong></td><td>RD$165</td><td><strong>RD$115</strong></td><td><button class="ficha" onclick="mayorQuote('Pinol')">Pedir</button></td></tr>
-<tr><td><strong>Coolant Regular</strong></td><td>RD$200</td><td><strong>RD$90</strong></td><td><button class="ficha" onclick="mayorQuote('Coolant Regular')">Pedir</button></td></tr>
-<tr><td><strong>Coolant 30%</strong></td><td>RD$400</td><td><strong>RD$350</strong></td><td><button class="ficha" onclick="mayorQuote('Coolant 30%')">Pedir</button></td></tr>
-<tr><td><strong>Coolant 50/50</strong></td><td>RD$600</td><td><strong>RD$425</strong></td><td><button class="ficha" onclick="mayorQuote('Coolant 50/50')">Pedir</button></td></tr>
-<tr><td><strong>Limpia cristales GL</strong></td><td>RD$140</td><td><strong>RD$115</strong></td><td><button class="ficha" onclick="mayorQuote('Limpia cristales galón')">Pedir</button></td></tr>
-<tr><td><strong>Limpia cristales 32oz</strong></td><td>—</td><td><strong>RD$95</strong></td><td><button class="ficha" onclick="mayorQuote('Limpia cristales 32oz')">Pedir</button></td></tr>
-<tr><td><strong>Shampoo Galón</strong></td><td>—</td><td><strong>RD$140</strong></td><td><button class="ficha" onclick="mayorQuote('Shampoo galón')">Pedir</button></td></tr>
-<tr><td><strong>Shampoo ½ galón</strong></td><td>—</td><td><strong>RD$90</strong></td><td><button class="ficha" onclick="mayorQuote('Shampoo medio galón')">Pedir</button></td></tr>
-</table></div>
-<div class="b2b-form">
-<h3>Pide tu cotización mayorista</h3>
-<p>Dinos qué necesitas y cuántas unidades. Te respondemos al momento.</p>
-<form onsubmit="event.preventDefault();waChoose('Hola Eliansa, quiero comprar al por mayor: '+this.prod.value+' x'+this.qty.value+' uds. Mi nombre es '+(this.nombre.value||''));">
-<label>Producto *</label><input name="prod" required placeholder="Ej. Desinfectante x12">
-<label>Cantidad *</label><input name="qty" required inputmode="numeric" placeholder="Ej. 12">
-<label>Tu nombre</label><input name="nombre" placeholder="Ej. María">
-<button class="btn-accent full" type="submit">Pedir por WhatsApp</button>
-</form>
-</div>
-</div>
-</section>
-
 <section id="opiniones" class="wrap section split">
 <div>
 <p class="kicker">CÓMO PEDIR</p><h2>Sin llamadas eternas ni precios por DM.</h2>
@@ -250,7 +213,7 @@
 <footer>
 <div class="wrap foot">
 <div><div class="brand"><span class="foot-logo"><img src="img/logo.png" alt="Productos Eliansa SRL"></span></div><p>“Tu hogar, nuestro compromiso.”<br>Pedidos por WhatsApp · Envíos disponibles.</p></div>
-<div><strong>Ver</strong><p><a href="#catalogo">Productos</a><br><a href="#combos">Combos</a><br><a href="#mayorista">Por mayor</a><br><a href="#opiniones">Opiniones</a></p></div>
+<div><strong>Ver</strong><p><a href="#catalogo">Productos</a><br><a href="#combos">Combos</a><br><a href="#opiniones">Opiniones</a></p></div>
 <div><strong>Contacto</strong><p>Santo Domingo Este<br>809-610-6690<br>829-778-5347</p></div>
 <div><strong>Horario</strong><p>Lun–Sáb 8am–6pm<br>Envíos disponibles</p></div>
 </div>
