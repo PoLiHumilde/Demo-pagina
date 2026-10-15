@@ -20,7 +20,7 @@ const PRODUCTS=[
 {id:13,cat:'auto',sku:'Auto 02',img:'img/limpia-parabrisas.jpg',name:'Limpia Parabrisas',spec:'Visibilidad clara',desc:'Remueve suciedad sin dejar residuos.',price:null,tag:'',hot:0},
 {id:14,cat:'auto',sku:'Auto 03',img:'img/agua-bateria.jpg',name:'Agua para Batería',spec:'Galón · Mantenimiento',desc:'Para el cuidado de la batería de tu vehículo.',price:null,tag:'',hot:0},
 {id:15,cat:'auto',sku:'Auto 04',img:'img/almorol.jpg',name:'Almorol Blanco',spec:'Spray · Protector premium',desc:'Acabado brillante con protección UV para gomas e interiores.',price:null,tag:'NUEVO',hot:0},
-{id:16,cat:'auto',sku:'Auto 05',img:'img/coolant-5050.jpg',name:'Coolant Mr. Brujo 50/50',spec:'Galón · Automotriz',desc:'Enfriamiento superior. Evita corrosión y sobrecalentamiento.',price:600,tag:'NUEVO',hot:0},
+{id:16,cat:'auto',sku:'Auto 05',img:'img/coolant-5050.jpg',name:'Coolant Mr. Bruj 50/50',spec:'Galón · Automotriz',desc:'Enfriamiento superior. Evita corrosión y sobrecalentamiento.',price:600,tag:'NUEVO',hot:0},
 {id:17,cat:'auto',sku:'Auto 06',img:'img/coolant-3030.jpg',name:'Coolant 30/30',spec:'Galón · Automotriz',desc:'Refrigerante para el radiador. Protección diaria.',price:400,tag:'NUEVO',hot:0},
 {id:18,cat:'auto',sku:'Auto 07',img:'img/coolant-regular.jpg',name:'Coolant Regular',spec:'Galón · Automotriz',desc:'Refrigerante regular para tu vehículo.',price:200,tag:'',hot:0},
 {id:19,cat:'hogar',sku:'Hogar 04',img:'img/jabon-cuaba-medio.jpg',name:'Jabón de Cuaba ½ Galón',spec:'½ GL · Limón',desc:'El clásico jabón de cuaba en tamaño medio galón.',price:null,tag:'NUEVO',hot:0},
