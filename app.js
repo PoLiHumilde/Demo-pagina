@@ -13,7 +13,7 @@ const PRODUCTS=[
 {id:7,cat:'bano',sku:'Baño 01',img:'img/cloro.jpg',name:'Cloro 1 Litro',spec:'1L · Desinfecta',desc:'Para baños, pisos y ropa blanca. No puede faltar.',price:90,tag:'',hot:0},
 {id:8,cat:'bano',sku:'Baño 02',img:'img/cloro-galon.jpg',name:'Cloro 1 Galón',spec:'1 GL · Limpieza profunda',desc:'Cloro en galón para baños, pisos y ropa blanca.',price:null,tag:'',hot:0},
 {id:20,cat:'bano',sku:'Baño 03',img:'img/legia.jpg',name:'Legía',spec:'Hipoclorito 5.25%',desc:'Blanquea y desinfecta ropa y superficies.',price:110,tag:'NUEVO',hot:0},
-{id:9,cat:'desinf',sku:'Desinf 01',img:'img/desinfectante-lavanda.jpg',name:'Desinfectante Lavanda',spec:'Aroma lavanda',desc:'Limpia, desinfecta y deja la casa oliendo rico por horas.',price:150,tag:'EL FAVORITO',hot:1},
+{id:9,cat:'desinf',sku:'Desinf 01',img:'img/desinfectante-lavanda.jpg',name:'Desinfectante Lavanda',spec:'Aroma lavanda',desc:'Limpia, desinfecta y deja la casa oliendo rico por horas.',price:190,tag:'EL FAVORITO',hot:1},
 {id:10,cat:'desinf',sku:'Desinf 02',img:'img/desinfectante-floral.jpg',name:'Desinfectante Floral',spec:'Galón · Bouquet floral',desc:'Fórmula de larga duración con aroma floral.',price:150,tag:'',hot:0},
 {id:11,cat:'pisos',sku:'Pisos 01',img:'img/limpia-ceramicas.jpg',name:'Limpia Cerámicas',spec:'Galón · Alto rendimiento',desc:'Limpia, desengrasa y da brillo a pisos cerámicos.',price:null,tag:'NUEVO',hot:0},
 {id:12,cat:'auto',sku:'Auto 01',img:'img/shampoo-autos.jpg',name:'Shampoo para Autos',spec:'Galón · Espuma activa',desc:'Lava y cuida la pintura de tu vehículo.',price:null,tag:'NUEVO',hot:0},
